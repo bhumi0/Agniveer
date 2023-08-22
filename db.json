@@ -1,0 +1,347 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "agniveers": [
+    {
+      "id": 24566,
+      "name": "bravo",
+      "checkSuffix": "b",
+      "trade": "elect",
+      "unit": "7TS",
+      "recommendation": false,
+      "bookout": false,
+      "bookedIn": true,
+      "postIn": "2022-12-16T18:30:00.000Z",
+      "late": "",
+      "bookoutDetails": [
+        {
+          "bookoutDate": "2023-01-01T14:00:13.071Z",
+          "bookinDate": "2023-01-01T17:00:13.071Z"
+        },
+        {
+          "bookoutDate": "2023-02-19T14:00:13.071Z",
+          "bookinDate": "2023-02-19T17:00:13.071Z"
+        },
+        {
+          "bookoutDate": "2023-03-14T05:00:13.071Z",
+          "bookinDate": "2023-03-14T09:00:13.071Z"
+        },
+        {
+          "bookoutDate": "2023-04-19T14:00:13.071Z",
+          "bookinDate": "2023-04-19T17:00:13.071Z"
+        },
+        {
+          "bookoutDate": "2023-05-19T04:00:13.071Z",
+          "bookinDate": "2023-05-19T07:00:13.071Z"
+        }
+      ],
+      "imgUrl": "assets/female2.png"
+    },
+    {
+      "id": 38764,
+      "name": "charlie",
+      "checkSuffix": "c",
+      "trade": "engine",
+      "unit": "9TS",
+      "recommendation": true,
+      "bookout": false,
+      "bookedIn": true,
+      "postIn": "2023-02-16T18:30:00.000Z",
+      "late": "",
+      "bookoutDetails": [
+        {
+          "bookoutDate": "2023-02-19T14:00:13.071Z",
+          "bookinDate": "2023-02-19T17:00:13.071Z"
+        },
+        {
+          "bookoutDate": "2023-03-14T05:00:13.071Z",
+          "bookinDate": "2023-03-14T09:00:13.071Z"
+        },
+        {
+          "bookoutDate": "2023-04-19T14:00:13.071Z",
+          "bookinDate": "2023-04-19T17:00:13.071Z"
+        },
+        {
+          "bookoutDate": "2023-05-19T04:00:13.071Z",
+          "bookinDate": "2023-05-19T07:00:13.071Z"
+        },
+        {
+          "bookoutDate": "2023-06-23T03:00:13.071Z",
+          "bookinDate": "2023-06-23T07:00:13.071Z"
+        },
+        {
+          "bookoutDate": "2023-07-09T03:00:13.071Z",
+          "bookinDate": "2023-07-09T05:00:13.071Z"
+        }
+      ],
+      "imgUrl": "assets/female3.png"
+    },
+    {
+      "id": 42223,
+      "name": "delta",
+      "checkSuffix": "d",
+      "trade": "air frame",
+      "unit": "9TS",
+      "recommendation": true,
+      "bookout": true,
+      "bookedIn": true,
+      "postIn": "2023-03-06T18:30:00.000Z",
+      "bookoutDetails": [
+        {
+          "bookoutDate": "2023-03-14T05:00:13.071Z",
+          "bookinDate": "2023-03-14T09:00:13.071Z"
+        },
+        {
+          "bookoutDate": "2023-04-19T14:00:13.071Z",
+          "bookinDate": "2023-04-19T17:00:13.071Z"
+        },
+        {
+          "bookoutDate": "2023-05-19T04:00:13.071Z",
+          "bookinDate": "2023-05-19T07:00:13.071Z"
+        },
+        {
+          "bookoutDate": "2023-06-06T04:26:22.005Z",
+          "bookinDate": "2023-06-06T08:26:22.005Z"
+        },
+        {
+          "bookoutDate": "2023-07-15T10:54:32.615Z",
+          "bookinDate": "2023-07-15T16:54:32.615Z"
+        }
+      ],
+      "imgUrl": "assets/female4.png"
+    },
+    {
+      "id": 59871,
+      "name": "echo",
+      "checkSuffix": "e",
+      "trade": "engine",
+      "unit": "9TS",
+      "recommendation": false,
+      "bookout": true,
+      "bookedIn": true,
+      "postIn": "2023-03-10T18:30:00.000Z",
+      "late": true,
+      "bookoutDetails": [
+        {
+          "bookoutDate": "2023-02-19T14:00:13.071Z",
+          "bookinDate": "2023-02-19T17:00:13.071Z"
+        },
+        {
+          "bookoutDate": "2023-03-14T05:00:13.071Z",
+          "bookinDate": "2023-03-14T09:00:13.071Z"
+        },
+        {
+          "bookoutDate": "2023-04-19T14:00:13.071Z",
+          "bookinDate": "2023-04-19T17:00:13.071Z"
+        },
+        {
+          "bookoutDate": "2023-05-19T04:00:13.071Z",
+          "bookinDate": "2023-05-19T07:00:13.071Z"
+        },
+        {
+          "bookoutDate": "2023-06-01T17:22:50.150Z",
+          "bookinDate": "2023-06-01T22:22:50.150Z"
+        },
+        {
+          "bookoutDate": "2023-07-03T04:26:22.005Z",
+          "bookinDate": "2023-07-03T08:26:22.005Z"
+        },
+        {
+          "bookoutDate": "2023-08-18T06:57:17.151Z",
+          "bookinDate": "2023-08-19T06:39:43.048Z"
+        }
+      ],
+      "imgUrl": "assets/male1.jpg"
+    },
+    {
+      "id": 59882,
+      "name": "foxtrot",
+      "checkSuffix": "f",
+      "trade": "air frame",
+      "unit": "9TS",
+      "recommendation": true,
+      "bookout": false,
+      "bookedIn": true,
+      "postIn": "2023-03-05T18:30:00.000Z",
+      "late": false,
+      "bookoutDetails": [
+        {
+          "bookoutDate": "2023-03-14T05:00:13.071Z",
+          "bookinDate": "2023-03-14T09:00:13.071Z"
+        },
+        {
+          "bookoutDate": "2023-04-19T14:00:13.071Z",
+          "bookinDate": "2023-04-19T17:00:13.071Z"
+        },
+        {
+          "bookoutDate": "2023-05-19T04:00:13.071Z",
+          "bookinDate": "2023-05-19T07:00:13.071Z"
+        },
+        {
+          "bookoutDate": "2023-06-19T14:00:13.071Z",
+          "bookinDate": "2023-06-19T17:00:13.071Z"
+        },
+        {
+          "bookoutDate": "2023-07-03T04:26:22.005Z",
+          "bookinDate": "2023-07-03T08:26:22.005Z"
+        },
+        {
+          "bookoutDate": "2023-08-09T03:00:13.071Z",
+          "bookinDate": "2023-08-09T05:00:13.071Z"
+        }
+      ],
+      "imgUrl": "assets/male2.png"
+    },
+    {
+      "id": 23452,
+      "name": "golf",
+      "checkSuffix": "g",
+      "trade": "elect",
+      "unit": "7TS",
+      "recommendation": true,
+      "bookout": false,
+      "bookedIn": true,
+      "postIn": "2023-03-10T18:30:00.000Z",
+      "late": "",
+      "bookoutDetails": [
+        {
+          "bookoutDate": "2023-03-14T05:00:13.071Z",
+          "bookinDate": "2023-03-14T09:00:13.071Z"
+        },
+        {
+          "bookoutDate": "2023-04-19T14:00:13.071Z",
+          "bookinDate": "2023-04-19T17:00:13.071Z"
+        },
+        {
+          "bookoutDate": "2023-05-19T04:00:13.071Z",
+          "bookinDate": "2023-05-19T07:00:13.071Z"
+        },
+        {
+          "bookoutDate": "2023-08-21T13:59:12.678Z",
+          "bookinDate": "2023-08-21T16:15:08.576Z"
+        }
+      ],
+      "imgUrl": "assets/male3.png"
+    },
+    {
+      "id": 47771,
+      "name": "hunter",
+      "checkSuffix": "h",
+      "trade": "elect",
+      "unit": "7TS",
+      "recommendation": false,
+      "bookout": false,
+      "bookedIn": true,
+      "postIn": "2023-03-10T18:30:00.000Z",
+      "bookoutDetails": [
+        {
+          "bookoutDate": "2023-03-14T05:00:13.071Z",
+          "bookinDate": "2023-03-14T09:00:13.071Z"
+        },
+        {
+          "bookoutDate": "2023-04-19T14:00:13.071Z",
+          "bookinDate": "2023-04-19T17:00:13.071Z"
+        },
+        {
+          "bookoutDate": "2023-05-19T04:00:13.071Z",
+          "bookinDate": "2023-05-19T07:00:13.071Z"
+        },
+        {
+          "bookoutDate": "2023-06-14T17:19:39.642Z",
+          "bookinDate": "2023-06-14T21:19:39.642Z"
+        },
+        {
+          "bookoutDate": "2023-07-03T04:26:22.005Z",
+          "bookinDate": "2023-07-03T08:26:22.005Z"
+        },
+        {
+          "bookoutDate": "2023-08-06T18:30:00.000Z",
+          "bookinDate": "2023-08-06T20:30:00.000Z"
+        }
+      ],
+      "imgUrl": "assets/male4.jpg"
+    }
+  ],
+  "offr": [
+    {
+      "id": 3700,
+      "name": "Wg Cdr XYZ",
+      "type": "adj",
+      "unit": "7TS",
+      "branch": "AE(L)",
+      "imgUrl": "assets/female1.png",
+      "password": "adj1237"
+    },
+    {
+      "id": 3701,
+      "name": "Wg Cdr UVW",
+      "type": "adj",
+      "unit": "9TS",
+      "branch": "AE(M)",
+      "imgUrl": "assets/female2.png",
+      "password": "adj1239"
+    },
+    {
+      "id": 3800,
+      "name": "Wg Cdr ABC",
+      "branch": "adm",
+      "unit": "2Wing",
+      "password": "secoffr123",
+      "type": "secoffr",
+      "imgUrl": "assets/male4.jpg"
+    },
+    {
+      "id": 43522,
+      "name": "Flt Lt Rohan",
+      "type": "secoffr",
+      "unit": "7TS",
+      "branch": "Adm",
+      "imgUrl": "assets/male3.png",
+      "password": "Road1234"
+    },
+    {
+      "id": 12432,
+      "name": "Sq Ldr Pranjal",
+      "type": "adj",
+      "unit": "30SQN",
+      "branch": "AE(M)",
+      "imgUrl": "assets/male2.png",
+      "password": "right123"
+    },
+    {
+      "id": 53433,
+      "name": "Sq Ldr Arya",
+      "type": "secoffr",
+      "unit": "30SQN",
+      "branch": "F(P)",
+      "imgUrl": "assets/female3.png",
+      "password": "aircraft"
+    }
+  ],
+  "adm": [
+    {
+      "id": 1000,
+      "name": "Gp Capt ADM",
+      "branch": "adm",
+      "unit": "2Wing",
+      "password": "adm123",
+      "type": "adm",
+      "imgUrl": "assets/male3.png"
+    }
+  ]
+}
