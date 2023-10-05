@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
-import { FetchService } from '../services/fetch.service';
+import { AdministratorService } from '../services/administratorFetch.service';
+import { OfficerService } from '../services/officerFetch.service';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
@@ -33,7 +34,8 @@ export class LoginPageComponent implements OnInit{
 
   constructor(private _fb: FormBuilder,
     private router: Router,
-    private _empService: FetchService) {
+    private officerService: OfficerService,
+    private administratorService: AdministratorService) {
       this.user = this._fb.group({
         id:'',
         name: '',
@@ -44,7 +46,7 @@ export class LoginPageComponent implements OnInit{
       });
      }
 
-  id: any;
+     id: any;
   password: string='';
   loginType: string='';
   res:any;
@@ -54,25 +56,31 @@ export class LoginPageComponent implements OnInit{
   }
 
   login() : void {
+    let userCredential = {
+      id: this.id,
+      password: this.password
+    }
     if(this.loginType=='adj' || this.loginType == 'secoffr'){
-      this._empService.getOffrById(this.id).subscribe(data => {
-        if(this.password == data.password){
-          LoginPageComponent.isLoggedIn = true;
-          this.router.navigateByUrl('/display', { state: {user : data} });
-        }
-        else {
-          alert("Wrong Password");
-        }
-      });
+        this.officerService.validateLogin(userCredential).subscribe(data => {
+          if(!data){
+            LoginPageComponent.isLoggedIn = false;
+            alert("Invalid credentials");
+          }
+          else{
+            LoginPageComponent.isLoggedIn = true;
+            this.router.navigateByUrl('/display', { state: {user : data} });
+          }
+        });
     }
     else if(this.loginType=='adm'){
-      this._empService.getAdmById(this.id).subscribe(data => {
-        if(this.password == data.password){
+      this.administratorService.validateLogin(userCredential).subscribe(data => {
+        if(!data){
+          LoginPageComponent.isLoggedIn = false;
+          alert("Invalid credentials");
+        }
+        else{
           LoginPageComponent.isLoggedIn = true;
           this.router.navigateByUrl('/adm', { state: {user : data} });
-        }
-        else {
-          alert("Wrong Password");
         }
       });
     }

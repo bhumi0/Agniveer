@@ -2,7 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { NewOffrComponent } from '../new-offr/new-offr.component';
 import { MatDialog } from '@angular/material/dialog';
-import { FetchService } from '../services/fetch.service';
+import { OfficerService } from '../services/officerFetch.service';
 import { CoreService } from '../core/core.service';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
@@ -27,14 +27,13 @@ export class AdmViewComponent implements OnInit{
     'branch',
     'unit',
     'type',
-    'password',
     'imageUrl',
     'action'
   ];
 
   constructor(
     private _dialog: MatDialog,
-    private _empService: FetchService,
+    private officerService: OfficerService,
     private _coreService: CoreService,
     private router: Router,
     private activatedRoute:ActivatedRoute){
@@ -47,7 +46,7 @@ export class AdmViewComponent implements OnInit{
   }
 
   getOfficersList() {
-    this._empService.getOffrList().subscribe({
+    this.officerService.getOffrList().subscribe({
       next: (res) => {
         this.dataSource =  new MatTableDataSource(res);
         this.dataSource.sort = this.sort;
@@ -92,7 +91,7 @@ export class AdmViewComponent implements OnInit{
   }
 
   deleteOffr(id:number,type:string){
-    this._empService.deleteOffrById(id).subscribe({
+    this.officerService.deleteOffrById(id).subscribe({
       next: (res) => {
         this._coreService.openSnackBar('Officer deleted!', 'done');
         this.getOfficersList();

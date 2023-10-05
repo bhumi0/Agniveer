@@ -2,7 +2,6 @@ import { Component, Inject, OnInit } from '@angular/core';
 import { FormArray, FormBuilder, FormGroup } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { CoreService } from '../core/core.service';
-import { FetchService } from '../services/fetch.service';
 import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
@@ -25,7 +24,6 @@ export class DetailsComponent implements OnInit {
       this.empForm = this._fb.group({
         id:'',
         name: '',
-        checkSuffix: '',
         recommendation:'',
         bookout:'',
         bookedin:'',
@@ -45,7 +43,6 @@ export class DetailsComponent implements OnInit {
 
     ngOnInit(): void {
       this.empForm.patchValue(this.data);
-      console.log((this.empForm.get('bookoutDetails') as FormArray).getRawValue())
       this.tableDataSource = new MatTableDataSource((this.empForm.get('bookoutDetails') as FormArray).getRawValue());
     }
 

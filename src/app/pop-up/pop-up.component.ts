@@ -2,7 +2,7 @@ import { Component, Inject, OnInit } from '@angular/core';
 import { FormArray, FormBuilder, FormGroup } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { CoreService } from '../core/core.service';
-import { FetchService } from '../services/fetch.service';
+import { AgniveerService } from '../services/agniveerFetch.service';
 
 
 interface Value {
@@ -11,11 +11,11 @@ interface Value {
 }
 
 @Component({
-  selector: 'agniveer-edit',
-  templateUrl: './agniveer-edit.component.html',
-  styleUrls: ['./agniveer-edit.component.scss'],
+  selector: 'pop-up',
+  templateUrl: './pop-up.component.html',
+  styleUrls: ['./pop-up.component.scss'],
 })
-export class AgniveerEditComponent implements OnInit {
+export class PopUpComponent implements OnInit {
   empForm: FormGroup;
   user: any;
   display: string = 'Allow Bookout';
@@ -25,15 +25,14 @@ export class AgniveerEditComponent implements OnInit {
 
   constructor(
     private _fb: FormBuilder,
-    private _empService: FetchService,
-    private _dialogRef: MatDialogRef<AgniveerEditComponent>,
+    private agniveerService: AgniveerService,
+    private _dialogRef: MatDialogRef<PopUpComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
     private _coreService: CoreService
   ) {
     this.empForm = this._fb.group({
       id:'',
       name: '',
-      checkSuffix: '',
       trade: '',
       unit: '',
       recommendation:'',
@@ -89,7 +88,7 @@ export class AgniveerEditComponent implements OnInit {
           };
           bookoutDetails.getRawValue().push(temp);
         }
-        this.empForm.patchValue({bookedIn: false});
+        this.empForm.patchValue({bookedIn: false, late: false});
       }
       else if(this.data.name == 'secoffrBookin'){
         let currentDate = new Date();
@@ -114,7 +113,7 @@ export class AgniveerEditComponent implements OnInit {
         }
       }
       if (this.data.value) {
-        this._empService
+        this.agniveerService
           .updateAgniveer(this.data.value.id, this.empForm.value)
           .subscribe({
             next: (val: any) => {

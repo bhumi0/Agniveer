@@ -20,7 +20,6 @@
     {
       "id": 24566,
       "name": "bravo",
-      "checkSuffix": "b",
       "trade": "elect",
       "unit": "7TS",
       "recommendation": false,
@@ -55,7 +54,6 @@
     {
       "id": 38764,
       "name": "charlie",
-      "checkSuffix": "c",
       "trade": "engine",
       "unit": "9TS",
       "recommendation": true,
@@ -94,13 +92,13 @@
     {
       "id": 42223,
       "name": "delta",
-      "checkSuffix": "d",
       "trade": "air frame",
       "unit": "9TS",
-      "recommendation": true,
-      "bookout": true,
+      "recommendation": false,
+      "bookout": false,
       "bookedIn": true,
       "postIn": "2023-03-06T18:30:00.000Z",
+      "late": "",
       "bookoutDetails": [
         {
           "bookoutDate": "2023-03-14T05:00:13.071Z",
@@ -121,6 +119,10 @@
         {
           "bookoutDate": "2023-07-15T10:54:32.615Z",
           "bookinDate": "2023-07-15T16:54:32.615Z"
+        },
+        {
+          "bookoutDate": "2023-08-23T07:45:24.977Z",
+          "bookinDate": "2023-08-23T07:45:30.532Z"
         }
       ],
       "imgUrl": "assets/female4.png"
@@ -128,7 +130,6 @@
     {
       "id": 59871,
       "name": "echo",
-      "checkSuffix": "e",
       "trade": "engine",
       "unit": "9TS",
       "recommendation": false,
@@ -171,7 +172,6 @@
     {
       "id": 59882,
       "name": "foxtrot",
-      "checkSuffix": "f",
       "trade": "air frame",
       "unit": "9TS",
       "recommendation": true,
@@ -210,7 +210,6 @@
     {
       "id": 23452,
       "name": "golf",
-      "checkSuffix": "g",
       "trade": "elect",
       "unit": "7TS",
       "recommendation": true,
@@ -241,13 +240,13 @@
     {
       "id": 47771,
       "name": "hunter",
-      "checkSuffix": "h",
       "trade": "elect",
       "unit": "7TS",
       "recommendation": false,
       "bookout": false,
       "bookedIn": true,
       "postIn": "2023-03-10T18:30:00.000Z",
+      "late": "",
       "bookoutDetails": [
         {
           "bookoutDate": "2023-03-14T05:00:13.071Z",
@@ -275,6 +274,42 @@
         }
       ],
       "imgUrl": "assets/male4.jpg"
+    },
+    {
+      "id": 59971,
+      "name": "echoooo",
+      "trade": "engine",
+      "unit": "9TS",
+      "recommendation": false,
+      "bookout": true,
+      "bookedIn": true,
+      "postIn": "2023-03-10T18:30:00.000Z",
+      "late": true,
+      "bookoutDetails": [
+        {
+          "bookoutDate": "2023-02-19T14:00:13.071Z",
+          "bookinDate": "2023-02-19T17:00:13.071Z"
+        }
+      ],
+      "imgUrl": "assets/male1.jpg"
+    },
+    {
+      "id": 59071,
+      "name": "echoooo",
+      "trade": "engine",
+      "unit": "9TS",
+      "recommendation": false,
+      "bookout": true,
+      "bookedIn": true,
+      "postIn": "2023-03-10T18:30:00.000Z",
+      "late": true,
+      "bookoutDetails": [
+        {
+          "bookoutDate": "2023-02-19T14:00:13.071Z",
+          "bookinDate": "2023-02-19T17:00:13.071Z"
+        }
+      ],
+      "imgUrl": "assets/male1.jpg"
     }
   ],
   "offr": [

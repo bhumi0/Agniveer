@@ -8,7 +8,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
-import { AgniveerEditComponent } from './agniveer-edit/agniveer-edit.component';
+import { PopUpComponent } from './pop-up/pop-up.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -37,7 +37,7 @@ import { OffrEditComponent } from './offr-edit/offr-edit.component';
 @NgModule({
   declarations: [
     AppComponent, 
-    AgniveerEditComponent, 
+    PopUpComponent, 
     ImgComponent,
     DetailsComponent,
     LoginPageComponent,

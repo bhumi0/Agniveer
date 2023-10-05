@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { AgniveerEditComponent } from '../agniveer-edit/agniveer-edit.component';
-import { FetchService } from '../services/fetch.service';
+import { PopUpComponent } from '../pop-up/pop-up.component';
+import { AgniveerService } from '../services/agniveerFetch.service';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
@@ -43,7 +43,7 @@ export class DisplayComponent implements OnInit {
 
     constructor(
       private _dialog: MatDialog,
-      private _empService: FetchService,
+      private agniveerService: AgniveerService,
       private _coreService: CoreService,
       private router: Router,
       private activatedRoute:ActivatedRoute
@@ -71,7 +71,7 @@ export class DisplayComponent implements OnInit {
     }
 
     getAgniveerList() {
-      this._empService.getAgniveerList().subscribe({
+      this.agniveerService.getAgniveerList().subscribe({
         next: (res) => {
           let outside = 0;
             if(this.user.type == 'adj'){
@@ -117,7 +117,6 @@ export class DisplayComponent implements OnInit {
           
           this.outside = outside;
           this.inCampus = this.total - this.outside;
-          // console.log(this.total + " " + this.outside + " " + this.inCampus);
           this.dataSource.sort = this.sort;
           this.dataSource.paginator = this.paginator;
         },
@@ -126,7 +125,7 @@ export class DisplayComponent implements OnInit {
     }
   
     deleteAgniveer(id: number) {
-      this._empService.deleteAgniveer(id).subscribe({
+      this.agniveerService.deleteAgniveer(id).subscribe({
         next: (res) => {
           this._coreService.openSnackBar('Agniveer deleted!', 'done');
           this.getAgniveerList();
@@ -150,7 +149,7 @@ export class DisplayComponent implements OnInit {
 
     openEditForm(data: any, user:string) {
       console.log(data);
-      const dialogRef = this._dialog.open(AgniveerEditComponent, {
+      const dialogRef = this._dialog.open(PopUpComponent, {
         data:{
           value : data,
           name: user

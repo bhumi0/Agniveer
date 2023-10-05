@@ -1,6 +1,6 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { FetchService } from '../services/fetch.service';
+import { OfficerService } from '../services/officerFetch.service';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { CoreService } from '../core/core.service';
 
@@ -14,7 +14,7 @@ export class OffrEditComponent implements OnInit{
   user: any;
   
 constructor(private _fb: FormBuilder,
-  private _empService: FetchService,
+  private officerService: OfficerService,
   private _dialogRef: MatDialogRef<OffrEditComponent>,
   @Inject(MAT_DIALOG_DATA) public data: any,
   private _coreService: CoreService){
@@ -41,7 +41,7 @@ constructor(private _fb: FormBuilder,
 
   onFormSubmit(){
     if (this.data.value) {
-      this._empService
+      this.officerService
         .updateOffr(this.data.value.id, this.empForm.value)
         .subscribe({
           next: (val: any) => {

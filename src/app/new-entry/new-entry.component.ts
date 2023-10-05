@@ -1,7 +1,7 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { FetchService } from '../services/fetch.service';
-import { AgniveerEditComponent } from '../agniveer-edit/agniveer-edit.component';
+import { AgniveerService } from '../services/agniveerFetch.service';
+import { PopUpComponent } from '../pop-up/pop-up.component';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { CoreService } from '../core/core.service';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -24,8 +24,8 @@ export class NewEntryComponent implements OnInit{
 
   constructor(
     private _fb: FormBuilder,
-    private _empService: FetchService,
-    private _dialogRef: MatDialogRef<AgniveerEditComponent>,
+    private agniveerService: AgniveerService,
+    private _dialogRef: MatDialogRef<PopUpComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
     private _coreService: CoreService,
     private router: Router,
@@ -71,7 +71,7 @@ export class NewEntryComponent implements OnInit{
   onFormSubmit() {
     this.empForm.patchValue({bookout: true,recommendation:true, bookedIn:true, unit:this.userUnit,bookoutDetails:[]})
     if (this.empForm.valid) {
-      this._empService.addAgniveer(this.empForm.value).subscribe({
+      this.agniveerService.addAgniveer(this.empForm.value).subscribe({
         next: (val: any) => {
           this._coreService.openSnackBar('Agniveer added successfully');
           this._dialogRef.close(true);
